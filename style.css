@@ -1,0 +1,170 @@
+body {
+  font-family: "Orbitron", sans-serif;
+  margin: 0;
+  background: radial-gradient(circle at top, #1a0033, #3a0ca3, #10002b);
+  color: #e0b3ff;
+  overflow-x: hidden;
+}
+
+/* === BLOCK === */
+header {
+  display: block;
+  text-align: center;
+  padding: 40px 20px;
+  background: rgba(20, 0, 40, 0.6);
+  box-shadow: 0 0 30px rgba(187, 134, 252, 0.4);
+  border-bottom: 2px solid #bb86fc;
+  animation: glowPulse 3s infinite alternate;
+}
+
+header h1 {
+  margin: 0;
+  color: #bb86fc;
+  text-shadow: 0 0 10px #bb86fc, 0 0 25px #7b2cbf;
+}
+
+header p {
+  color: #d4bfff;
+  margin-top: 8px;
+}
+
+/* === INLINE === */
+nav {
+  text-align: center;
+  margin-top: 15px;
+}
+
+nav a {
+  display: inline;
+  color: #c77dff;
+  text-decoration: none;
+  margin: 0 15px;
+  padding: 5px 10px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+  color: #fff;
+  border-bottom: 2px solid #bb86fc;
+  text-shadow: 0 0 10px #bb86fc;
+}
+
+/* === INLINE-BLOCK === */
+.container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.card {
+  display: inline-block;
+  width: 280px;
+  margin: 20px;
+  background: rgba(187, 134, 252, 0.07);
+  border: 1px solid rgba(187, 134, 252, 0.3);
+  border-radius: 15px;
+  padding: 20px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 25px rgba(187, 134, 252, 0.25);
+  vertical-align: top;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card1 {
+  display: inline-block;
+  width: 280px;
+  margin: 20px;
+  background: rgba(187, 134, 252, 0.07);
+  border: 1px solid rgba(187, 134, 252, 0.3);
+  border-radius: 15px;
+  padding: 20px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 25px rgba(187, 134, 252, 0.25);
+  vertical-align: top;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: auto;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 40px rgba(187, 134, 252, 0.8);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid rgba(187, 134, 252, 0.3);
+}
+
+.card h3 {
+  margin-top: 15px;
+  color: #e0b3ff;
+  text-shadow: 0 0 8px #bb86fc;
+}
+
+.card p {
+  color: #d9caff;
+  font-size: 14px;
+}
+
+/* FOOTER */
+footer {
+  display: block;
+  text-align: center;
+  margin-top: 60px;
+  padding: 20px;
+  border-top: 1px solid rgba(187, 134, 252, 0.3);
+  color: #d9caff;
+  font-size: 14px;
+}
+
+/* === PAGE TRANSITION ANIMATION === */
+body {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* Efek saat link diklik */
+.fade-out {
+  animation: fadeOut 0.8s ease forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-30px);
+    filter: blur(5px);
+  }
+}
+
+/* === ANIMASI CAHAYA GLOW === */
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 20px rgba(187, 134, 252, 0.3);
+  }
+
+  100% {
+    box-shadow: 0 0 40px rgba(187, 134, 252, 0.8);
+  }
+}
